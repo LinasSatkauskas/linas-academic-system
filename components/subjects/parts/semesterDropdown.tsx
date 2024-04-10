@@ -10,7 +10,7 @@ export function SemesterDropdown(props: IProps) {
   useEffect(() => {
     fetch("/api/semesters")
       .then((r) => r.json())
-      .then((r) => r.setSemesters(r))
+      .then((r) => setSemesters(r))
       .catch((e) => console.error(e))
   }, [])
 
