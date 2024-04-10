@@ -55,12 +55,12 @@ export function Form(props: IProps) {
         }
     }
 
-    return(
+    return (
         <form ref={ref} action={handleAction} className="grid gap-y-5 max-w-md">
             <div className="grid grid-cols-2">
-                <Select options={toSellArr(certTypes, "title")} selProps={selProps} />
+                <Select options={toSelArr(certTypes, "title")} selProps={selProps} />
                 </div>
-                <div className="grid grid-cols-2"
+                <div className="grid grid-cols-2">
                 <TextField
                 label="Pastaba"
                 name="company"
@@ -72,13 +72,13 @@ export function Form(props: IProps) {
                 {editCert?.id && <input type="hidden" name="id" value={editCert.id} />}
                 <div
                 className={'my-2 text-sm italic p-1 ${
-                    state?.errors ? "bg-red-100" : state?.message ? "bg-green-100" > ""
+                state?.errors ? "bg-red-100" : state?.message ? "bg-green-100" : ""
                 }'}
                 >
                 {state?.message}
                 </div>
                 <div className="mt-1 w-14">
-                    <SubmitButton/>
+                    <SubmitButton />
                 </div>
                 </form>
     )
