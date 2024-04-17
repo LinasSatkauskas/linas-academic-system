@@ -1,7 +1,7 @@
 export async function PUT(request: NextRequest) {
   const res: ICertificate = await request.json()
 
-  const myCertificates = MyDb.certificates
+  const myCertificates = myDb.certificates
 
   const index = myCertificates.findIndex((i) => i.id === res.id)
 

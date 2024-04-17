@@ -33,19 +33,19 @@ export function CertList(props: IProps) {
           </th>
         </tr>
       </thead>
-      <body className="bg-white border-b">
+      <tbody className="bg-white border-b">
         {certificates.map((c) => (
           <tr key={c.id}>
             <td className="px-6 py-4">{findType(c.typeId)}</td>
             <td className="px-6 py-4">{c.company}</td>
             <td className="px-6 py-4">
               <button title="Keisti duomenis" onClick={() => changeCert(c.id)}>
-                <PencilIcon className="w-5 g-5 stroke-blue-600" />
+                <PencilIcon className="w-5 h-5 stroke-blue-600" />
               </button>
             </td>
           </tr>
         ))}
-      </body>
+      </tbody>
     </table>
   )
 }
