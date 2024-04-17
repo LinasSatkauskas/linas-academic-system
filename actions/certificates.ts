@@ -22,7 +22,7 @@ export async function createCertificates(
   if (!parse.success) {
     return {
       errors: parse.error.flatten().fieldErrors,
-      message: "Blogai užpuldyti laukeliai!",
+      message: "Blogai užpildyti laukeliai!",
       isSaved: false,
     }
   }
