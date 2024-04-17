@@ -10,10 +10,6 @@ const subjectsDb: { [key: string]: ISubject[] } = {
     { id: 3, title: "Objektinis programavimas" },
     { id: 4, title: "Profesinė kalba" },
   ],
-  3: [
-    { id: 5, title: "Tinklai" },
-    { id: 6, title: "Duomenų bazės" },
-  ],
 }
 
 export function GET(request: NextRequest) {
