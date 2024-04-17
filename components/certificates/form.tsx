@@ -1,7 +1,7 @@
 "use client"
 import { IState } from "@/types/shared.t"
 import { useFormState } from "react-dom"
-import { ICertType, ICertificate } from "@/types/certificates"
+import { ICertType, ICertificate } from "@/types/certificate.t"
 import { SubmitButton } from "@/components/parts/submitButton"
 import { createCertificates } from "@/actions/certificates"
 import { useEffect, useMemo, useRef, useState } from "react"

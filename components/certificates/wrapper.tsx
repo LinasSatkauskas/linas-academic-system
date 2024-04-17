@@ -1,5 +1,5 @@
 "use client"
-import { ICertType, ICertificate } from "@/types/certificates"
+import { ICertType, ICertificate } from "@/types/certificate.t"
 import { Form } from "./form"
 import { CertList } from "./list"
 import { useEffect, useState } from "react"
