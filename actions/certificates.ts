@@ -9,7 +9,8 @@ export async function createCertificates(
 ): Promise<IState> {
   const schema = z.object({
     id: z.coerce.number().optional(),
-    typeId: z.string().min(2),
+    typeId: z.coerce.number(),
+    company: z.string().min(2),
   })
   const rawFormData = {
     id: formData.get("id"),
