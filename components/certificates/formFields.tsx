@@ -55,14 +55,6 @@ export function FormFields(props: IProps) {
     }
   }
 
-  const handleAction = (data: FormData) => {
-    formAction(data)
-    ref.current?.reset()
-    if (data.has("id")) {
-      setEditCert(undefined)
-    }
-  }
-
   return (
     <form ref={ref} action={handleAction} className="grid gap-y-5 max-w-md">
       <div className="grid grid-cols-2">
