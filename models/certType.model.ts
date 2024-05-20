@@ -23,3 +23,4 @@ const CertTypeSchema = new Schema<ICertType>(
     },
   }
 )
+export const CertType = models.CertType || model("CertType", certTypeSchema)
