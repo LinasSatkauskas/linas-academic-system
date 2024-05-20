@@ -1,6 +1,6 @@
 "use client"
 import { PencilIcon } from "@heroicons/react/24/outline"
-import { ICertType, ICertificate } from "@/types/certificate.t"
+import { ICertificate } from "@/models/certificate.model"
 type IProps = {
   certTypes: ICertType[]
   certificates: ICertificate[]

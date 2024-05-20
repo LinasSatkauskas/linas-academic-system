@@ -35,7 +35,7 @@ export function FormFields(props: IProps) {
       label: "Pažymos pavadinimas",
       name: "typeId",
       isRequired: true,
-      defaultValue: editCert?.typeId ?? 0,
+      defaultValue: editCert?.typeId,
       error: state?.errors?.typeId && state?.errors?.typeId.join(" | "),
     }),
     [editCert, state]

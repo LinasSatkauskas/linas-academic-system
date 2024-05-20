@@ -1,12 +1,8 @@
-import { ICertType } from "@/types/certificate.t"
+import { CertTypeService } from "@/services/CertTypeService"
 import { type NextRequest } from "next/server"
 
-const certTypes: ICertType[] = [
-  { id: 1, title: "Studijų pažyma" },
-  { id: 2, title: "Akademinės atostogos" },
-  { id: 3, title: "Skolos lapelis" },
-]
-
 export async function GET(request: NextRequest) {
+  const certTypeService = new CertTypeService()
+  const certTypes = await certTypeService.getAll()
   return Response.json(certTypes)
 }

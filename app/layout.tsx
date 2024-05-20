@@ -2,12 +2,6 @@ import type { Metadata } from "next"
 import "./globals.css"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { ICertificate } from "@/types/certificate.t"
-
-type IMyDb = { certificates: ICertificate[] }
-export const myDb: IMyDb = {
-  certificates: [],
-}
 
 export const metadata: Metadata = {
   title: "Lino akademinė sistema",

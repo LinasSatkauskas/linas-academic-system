@@ -7,7 +7,7 @@ type IProps = {
     name: string
     label: string
     isRequired: boolean
-    defaultValue: number
+    defaultValue: string
     error?: string
   }
 }
@@ -15,7 +15,7 @@ type IProps = {
 export function Select(props: IProps) {
   const { options, selProps } = props
 
-  const [value, setValue] = useState<number>(selProps.defaultValue)
+  const [value, setValue] = useState<string | undefined>(selProps.defaultValue)
   useEffect(() => {
     setValue(selProps.defaultValue)
   }, [selProps])
@@ -34,7 +34,7 @@ export function Select(props: IProps) {
         id={selProps.name}
         name={selProps.name}
         value={value}
-        onChange={(e) => setValue(Number(e.target.value))}
+        onChange={(e) => setValue(String(e.target.value))}
         required={selProps.isRequired}
       >
         <option></option>
