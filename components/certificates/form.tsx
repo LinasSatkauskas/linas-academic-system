@@ -1,5 +1,6 @@
 "use client"
-import { ICertType, ICertificate } from "@/types/certificate.t"
+import { ICertType } from "@/models/certType.model"
+import { ICertificate } from "@/models/certificate.model"
 import { useEffect, useState } from "react"
 import { Modal } from "../modal"
 import { FormFields } from "./formFields"

@@ -5,7 +5,8 @@ import { TextField } from "../parts/textField"
 import { SubmitButton } from "@/components/parts/submitButton"
 import { useEffect, useMemo, useRef } from "react"
 import { useFormState } from "react-dom"
-import { ICertType, ICertificate } from "@/types/certificate.t"
+import { ICertType } from "@/models/certType.model"
+import { ICertificate } from "@/models/certificate.model"
 import { createCertificates } from "@/actions/certificates"
 
 const initialState: IState = {

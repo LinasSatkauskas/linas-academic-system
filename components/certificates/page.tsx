@@ -1,5 +1,5 @@
 import { Wrapper } from "@/components/certificates/wrapper"
-import { ICertType } from "@/types/certificate.t"
+import { ICertType } from "@/models/certType.model"
 import { getApi } from "@/utils/serverApi"
 
 export default async function CertificatePage() {
