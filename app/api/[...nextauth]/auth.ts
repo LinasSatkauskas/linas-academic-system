@@ -2,10 +2,11 @@ import NextAuth from "next-auth"
 import Credentials from "next-auth/providers/credentials"
 import { comparePassword } from "@/utils/password"
 import { connMongoose} from "@/utils/connect-mongoose"
-import { user} from "@/models/user.model"
+import { User} from "@/models/user.model"
 import {signInSchema} from "@/utils/form/loginValidator"
+import { SessionWrapper } from "@/components/SessionWrapper"
 
-export const { handlers,auth, signIn, signOut } = NextAuth({
+export const { handlers, auth, signIn, signOut } = NextAuth({
     providers: [
         Credentials({
             credentials: {
@@ -44,7 +45,7 @@ return {
     name: user.username,
 }
 },
-}],
+}),
 ],
 
 session: {
@@ -54,7 +55,7 @@ session: {
 
 callbacks: {
     async session({session, user, token}) {
-        sessionStorage.user.id = token.sub as string 
+        session.user.id = token.sub as string 
         return session
     },
 },

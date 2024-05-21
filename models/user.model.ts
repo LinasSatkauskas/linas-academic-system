@@ -35,7 +35,6 @@ const UserSchema = new Schema<IUser>(
       transform: (_, ret) => {
         ret.id = ret._id
         delete ret._id
-        delete ret.__v
       },
     },
   }
