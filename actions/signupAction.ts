@@ -1,3 +1,4 @@
+"use server"
 import { IState } from "@/types/shared.t"
 import { connMongoose } from "@/utils/connect-mongoose"
 import { signUpSchema } from "@/utils/form/loginValidator"
