@@ -4,8 +4,8 @@ export const getApi = async <T>(
   url: string,
   options: Record<string, any> = {}
 ): Promise<T> => {
-  const Response = await fetch(`${SITE}${url}`, options)
-  return await Response.json()
+  const response = await fetch(`${SITE}${url}`, options)
+  return await response.json()
 }
 
 export const postApi = async (url: string, body: object, method = "POST") => {
