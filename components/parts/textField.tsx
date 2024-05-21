@@ -2,12 +2,13 @@ type IProps = {
   label: string
   name: string
   isRequired: boolean
+  type?: string
   defaultValue?: string
   errors?: string[]
 }
 
 export function TextField(props: IProps) {
-  const { label, name, defaultValue, errors, isRequired } = props
+  const { label, name, defaultValue, errors, isRequired, type } = props
   return (
     <>
       <label
@@ -19,7 +20,7 @@ export function TextField(props: IProps) {
       <input
         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
         focus:ring-blue-500 focus:border-blue-500 block w-full p-1"
-        type="text"
+        type={type || "text"}
         required={isRequired}
         id={name}
         name={name}

@@ -1,6 +1,7 @@
+"use client"
 import { useFormStatus } from "react-dom"
 
-export function SubmitButton() {
+export function SubmitButton(props: { name?: string }) {
   const { pending } = useFormStatus()
   return (
     <button
@@ -10,7 +11,7 @@ export function SubmitButton() {
       focus:ring-4 focus:ring-blue-3000 font-medium rounded-lg
        text-sm px-5 py-1 me-2 mb-2"
     >
-      Siųsti
+      {props.name || "Siųsti"}
     </button>
   )
 }

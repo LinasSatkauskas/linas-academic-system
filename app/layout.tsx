@@ -2,6 +2,8 @@ import type { Metadata } from "next"
 import "./globals.css"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { auth } from "@/auth"
+import { SessionWrapper } from "@/components/SessionWrapper"
 
 export const metadata: Metadata = {
   title: "Lino akademinė sistema",
@@ -13,12 +15,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const session = await auth()
   return (
     <html lang="lt">
       <body className="container mx-auto max-w-screen-x1">
-        <Header />
-        {children}
-        <Footer />
+        <SessionWrapper session={session}>
+          <Header />
+          {children}
+          <Footer />
+        </SessionWrapper>
       </body>
     </html>
   )
