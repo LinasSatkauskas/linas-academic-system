@@ -1,4 +1,4 @@
-import { AuthNav } from ".authNav"
+import { AuthNav } from "@/components/authNav"
 import { Nav } from "./nav"
 import { INav } from "@/types/nav.t"
 
