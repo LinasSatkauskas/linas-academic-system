@@ -59,14 +59,21 @@ export function FormFields(props: IProps) {
   return (
     <form ref={ref} action={handleAction} className="grid gap-y-5 max-w-md">
       <div className="grid grid-cols-2">
-        <Select options={toSelArr(certTypes, "title")} selProps={selProps} />
+        <Select
+          options={toSelArr(certTypes, "title")}
+          selProps={{
+            ...selProps,
+            defaultValue:
+              editCert?.typeId !== undefined ? editCert?.typeId.toString() : "",
+          }}
+        />
       </div>
       <div className="grid grid-cols-2">
         <TextField
           label="Pastaba"
           name="company"
           isRequired={true}
-          defaultValue={editCert?.company}
+          defaultValue={editCert?.company?.toString()}
           errors={state?.errors?.company}
         />
       </div>
