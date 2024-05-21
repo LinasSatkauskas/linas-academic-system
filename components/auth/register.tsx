@@ -41,7 +41,6 @@ export function Register() {
           label="Slaptažodis"
           name="password"
           isRequired={true}
-          type="email"
           errors={state?.errors?.password}
         />
       </div>

@@ -28,7 +28,7 @@ export function TextField(props: IProps) {
       />
       {errors ? (
         <div className="mt-1 col-span-2 p-1 bg-red-100 italic text-sm">
-          {errors.join("|")}
+          {errors.join(" | ")}
         </div>
       ) : null}
     </>

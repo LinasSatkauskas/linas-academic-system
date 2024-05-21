@@ -2,7 +2,7 @@ import { model, models, Schema } from "mongoose"
 
 export interface ICertType {
   id: string
-  title: String
+  title: string
 }
 
 const CertTypeSchema = new Schema<ICertType>(
