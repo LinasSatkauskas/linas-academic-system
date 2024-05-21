@@ -5,6 +5,7 @@ export class CertTypeService {
   async getAll() {
     await connMongoose()
     const certTypes = await CertType.find()
+    console.log(certTypes)
     return certTypes
   }
 }

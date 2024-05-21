@@ -1,7 +1,7 @@
 import { model, models, Schema } from "mongoose"
 
 export interface ICertType {
-  id: Number
+  id: string
   title: String
 }
 
@@ -17,8 +17,8 @@ const CertTypeSchema = new Schema<ICertType>(
       versionKey: false,
       virtuals: true,
       transform: (_, ret) => {
-        ret.id = ret.id
-        delete ret.id
+        ret.id = ret._id
+        delete ret._id
       },
     },
   }

@@ -38,7 +38,7 @@ export function Nav(props: IProps) {
         md:space-x-8 md:mt-0 md:border-0 md:bg-white"
           >
             {menu.map((item) => (
-              <li>
+              <li key={item.slug}>
                 <Link
                   href={item.slug}
                   className="block py-2 px-3 text-gray-800 hover:no-underline hover:text-gray-900 visited:text-gray-800
