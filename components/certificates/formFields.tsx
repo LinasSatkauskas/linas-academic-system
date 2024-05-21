@@ -8,7 +8,7 @@ import { useFormState } from "react-dom"
 import { ICertType } from "@/models/certType.model"
 import { ICertificate } from "@/models/certificate.model"
 import { createCertificates } from "@/actions/certificates"
-
+import { useBoundStore } from "@/store/useBoundStore"
 const initialState: IState = {
   message: "",
   errors: undefined,
@@ -25,7 +25,9 @@ type IProps = {
 export function FormFields(props: IProps) {
   const ref = useRef<HTMLFormElement>(null)
   const { certTypes, getCertFromApi, editCert, setEditCert } = props
-
+  const { setMessage } = useBoundStore((state) => ({
+    setMessage: state.setMessage,
+  }))
   const [state, formAction] = useFormState<IState, FormData>(
     createCertificates,
     initialState
@@ -44,6 +46,7 @@ export function FormFields(props: IProps) {
 
   useEffect(() => {
     if (state.isSaved) {
+      setMessage(state?.message ?? "")
       getCertFromApi()
     }
   }, [state])
