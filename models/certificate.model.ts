@@ -1,9 +1,9 @@
 import { model, models, Schema } from "mongoose"
 
 export interface ICertificate {
-  id?: string
-  typeId: string
-  company: string
+  id?: number
+  typeId: number
+  company: String
   isCreated?: boolean
 }
 

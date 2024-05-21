@@ -1,3 +1,4 @@
+"use client"
 import { signInAction } from "@/actions/signinAction"
 import { SubmitButton } from "@/components/parts/submitButton"
 import { TextField } from "@/components/parts/textField"

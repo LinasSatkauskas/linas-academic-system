@@ -11,9 +11,9 @@ type IProps = {
 export function CertList(props: IProps) {
   const { certTypes, certificates, setEditCert } = props
 
-  const findType = (id?: string) => certTypes.find((i) => i.id === id)?.title
+  const findType = (id?: number) => certTypes.find((i) => i.id === id)?.title
 
-  const changeCert = (id?: string) => {
+  const changeCert = (id?: number) => {
     if (!id) return
     const cert = certificates.find((i) => i.id === id)
     if (!cert) return
