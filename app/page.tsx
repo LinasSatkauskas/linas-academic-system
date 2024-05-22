@@ -7,6 +7,7 @@ export default function Home() {
       <div>Tvarkaraščiai</div>
       <div>Dėstytojai</div>
       <div>Informacija</div>
+      <MessageList />
     </div>
   )
 }
