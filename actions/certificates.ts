@@ -14,6 +14,7 @@ export async function createCertificates(
   })
   const rawFormData = {
     id: formData.has("id") ? formData.get("id") : undefined,
+    typeId: formData.get("typeId"),
     company: formData.get("company"),
   }
 
