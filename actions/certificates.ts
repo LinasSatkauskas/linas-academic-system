@@ -13,8 +13,8 @@ export async function createCertificates(
     company: z.string().min(2),
   })
   const rawFormData = {
-    id: formData.has("id") ? formData.get("id") : undefined,
-    typeId: formData.get("typeId"),
+    id: formData.has("_id") ? formData.get("_id") : undefined,
+    typeId: formData.has("title") ? formData.get("title") : undefined,
     company: formData.get("company"),
   }
 
